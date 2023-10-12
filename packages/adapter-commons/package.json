@@ -46,9 +46,7 @@
     "src/**",
     "lib/**"
   ],
-  "publishConfig": {
-    "access": "private"
-  },
+  "private": "true",
   "dependencies": {
     "@nxpkg.khulnasoft.commons": "^5.0.11",
     "@nxpkg/errors": "^5.0.11",

@@ -43,9 +43,6 @@
   "scripts": {
     "test": "echo \"No tests necessary\""
   },
-  "publishConfig": {
-    "access": "private"
-  },
   "dependencies": {
     "@nxpkg/cli": "^5.0.11"
   }

@@ -50,9 +50,6 @@
   "directories": {
     "lib": "lib"
   },
-  "publishConfig": {
-    "access": "private"
-  },
   "dependencies": {
     "@nxpkg/schema": "^5.0.11",
     "@sinclair/typebox": "^0.25.0"

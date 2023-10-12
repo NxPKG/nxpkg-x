@@ -49,9 +49,6 @@
   "directories": {
     "lib": "lib"
   },
-  "publishConfig": {
-    "access": "private"
-  },
   "dependencies": {
     "@nxpkg/authentication": "^5.0.11",
     "@nxpkg.khulnasoft.commons": "^5.0.11",
