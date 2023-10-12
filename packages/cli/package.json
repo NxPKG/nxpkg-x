@@ -48,7 +48,7 @@
     "mocha": "mocha --timeout 60000 --config ../../.mocharc.json --recursive test/**.test.ts test/**/*.test.ts",
     "test": "npm run compile && npm run mocha"
   },
-  "private":"true",
+  "private": "true",
   "dependencies": {
     "@nxpkg/generators": "^5.0.11",
     "chalk": "^4.0.1",

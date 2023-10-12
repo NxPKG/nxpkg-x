@@ -1,9 +1,8 @@
 {
   "name": "@nxpkg/client",
   "description": "A module that consolidates Nxpkg client modules for REST (jQuery, Request, Superagent) and Websocket (Socket.io, Primus) connections",
-  
   "version": "5.0.11",
-  "private":"true",
+  "private": "true",
   "repository": {
     "type": "git",
     "url": "https://github.com/nxpkg/nxpkg.git",
