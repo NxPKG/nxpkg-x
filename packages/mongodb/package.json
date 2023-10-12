@@ -11,7 +11,7 @@
   "license": "MIT",
   "funding": {
     "type": "github",
-    "url": "https://github.com/sponsors/daffl"
+    "url": "https://github.com/sponsors/nxpkg"
   },
   "repository": {
     "type": "git",
@@ -48,7 +48,7 @@
     "lib": "lib"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "private"
   },
   "dependencies": {
     "@nxpkg/adapter-commons": "^5.0.11",
@@ -68,6 +68,5 @@
     "mongodb-memory-server": "^9.0.0",
     "shx": "^0.3.4",
     "typescript": "^5.2.2"
-  },
-  "gitHead": "90caf635aec850550b9d37bea2762af959d9e8d5"
+  }
 }

@@ -13,7 +13,7 @@
   "license": "MIT",
   "funding": {
     "type": "github",
-    "url": "https://github.com/sponsors/daffl"
+    "url": "https://github.com/sponsors/nxpkg"
   },
   "repository": {
     "type": "git",
@@ -44,10 +44,9 @@
     "test": "echo \"No tests necessary\""
   },
   "publishConfig": {
-    "access": "public"
+    "access": "private"
   },
   "dependencies": {
     "@nxpkg/cli": "^5.0.11"
-  },
-  "gitHead": "90caf635aec850550b9d37bea2762af959d9e8d5"
+  }
 }
