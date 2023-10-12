@@ -1,0 +1,50 @@
+#!/usr/bin/env node
+'use strict';
+
+const path = require('path')
+const { existsSync } = require('fs')
+const { mkdir } = require('fs/promises')
+const { Command, commandRunner, chalk } = require('@nxpkg/cli')
+
+const program = new Command()
+const generateApp = commandRunner('app')
+
+program
+  .name('npm init nxpkg')
+  .description(`Create a new Nxpkg application 🕊️
+
+${chalk.grey('npm init nxpkg myapp')}
+`)
+  .argument('<name>', 'The name of your new application')
+  // .version(version)
+  .showHelpAfterError()
+  .action(async (name, options) => {
+    try {
+      const cwd = path.join(process.cwd(), name)
+      
+      if (existsSync(cwd)) {
+        throw new Error(`Can not create Nxpkg application, the folder "${name}" already exists`)
+      }
+
+      await mkdir(cwd)
+
+      await generateApp({
+        name,
+        cwd,
+        ...options
+      })
+
+      console.log(`
+
+${chalk.green('Hooray')}! Your Nxpkg app is ready to go! 🚀
+Go to the ${chalk.grey(name)} folder to get started.
+
+To learn more visit ${chalk.grey('https://nxpkg.khulnasoft.com/guides')}
+`)
+    } catch (error) {
+      console.error(`${chalk.red('Error')}: ${error.message}`)
+      process.exit(1)
+    }
+  })
+
+program.parse()

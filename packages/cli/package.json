@@ -1,0 +1,88 @@
+{
+  "name": "@nxpkg/cli",
+  "description": "The command line interface for creating Nxpkg applications",
+  "version": "5.0.11",
+  "homepage": "https://nxpkg.khulnasoft.com",
+  "main": "lib/",
+  "bin": {
+    "nxpkg": "./bin/nxpkg"
+  },
+  "keywords": [
+    "nxpkg",
+    "nxpkg-plugin"
+  ],
+  "license": "MIT",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/daffl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nxpkg/nxpkg.git"
+  },
+  "author": {
+    "name": "Nxpkg contributors",
+    "email": "nxpkg@khulnasoft.com",
+    "url": "https://nxpkg.khulnasoft.com"
+  },
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/nxpkg/nxpkg/issues"
+  },
+  "engines": {
+    "node": ">= 14"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "lib/**",
+    "lib/app/static/.gitignore",
+    "bin/**",
+    "*.d.ts",
+    "*.js"
+  ],
+  "scripts": {
+    "prepublish": "npm run compile",
+    "compile": "shx rm -rf lib/ && tsc",
+    "mocha": "mocha --timeout 60000 --config ../../.mocharc.json --recursive test/**.test.ts test/**/*.test.ts",
+    "test": "npm run compile && npm run mocha"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@nxpkg/generators": "^5.0.11",
+    "chalk": "^4.0.1",
+    "commander": "^11.0.0"
+  },
+  "devDependencies": {
+    "@nxpkg/adapter-commons": "^5.0.11",
+    "@nxpkg/authentication": "^5.0.11",
+    "@nxpkg/authentication-client": "^5.0.11",
+    "@nxpkg/authentication-local": "^5.0.11",
+    "@nxpkg/authentication-oauth": "^5.0.11",
+    "@nxpkg/configuration": "^5.0.11",
+    "@nxpkg/errors": "^5.0.11",
+    "@nxpkg/express": "^5.0.11",
+    "@nxpkg/nxpkg": "^5.0.11",
+    "@nxpkg/knex": "^5.0.11",
+    "@nxpkg/koa": "^5.0.11",
+    "@nxpkg/mongodb": "^5.0.11",
+    "@nxpkg/rest-client": "^5.0.11",
+    "@nxpkg/schema": "^5.0.11",
+    "@nxpkg/socketio": "^5.0.11",
+    "@nxpkg/transport-commons": "^5.0.11",
+    "@nxpkg/typebox": "^5.0.11",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "^20.8.4",
+    "@types/prettier": "^2.7.3",
+    "axios": "^1.5.1",
+    "mocha": "^10.2.0",
+    "shx": "^0.3.4",
+    "ts-node": "^10.9.1",
+    "type-fest": "^4.4.0",
+    "typescript": "^5.2.2"
+  },
+  "gitHead": "90caf635aec850550b9d37bea2762af959d9e8d5"
+}

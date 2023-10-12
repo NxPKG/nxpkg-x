@@ -1,0 +1,96 @@
+{
+  "name": "@nxpkg/generators",
+  "version": "5.0.11",
+  "description": "Nxpkg CLI core generators, powered by Pinion",
+  "homepage": "https://nxpkg.khulnasoft.com",
+  "keywords": [
+    "nxpkg",
+    "pinion"
+  ],
+  "license": "MIT",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/daffl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nxpkg/nxpkg.git",
+    "directory": "packages/commons"
+  },
+  "author": {
+    "name": "Nxpkg contributor",
+    "email": "nxpkg@khulnasoft.com",
+    "url": "https://nxpkg.khulnasoft.com"
+  },
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/nxpkg/nxpkg/issues"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "main": "lib/",
+  "types": "lib/",
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "lib/**",
+    "lib/app/static/.gitignore",
+    "*.d.ts",
+    "*.js"
+  ],
+  "scripts": {
+    "prepublish": "npm run compile",
+    "compile": "shx rm -rf lib/ && tsc && shx cp -r src/. lib/",
+    "test": "npm run compile && mocha --config ../../.mocharc.json --recursive test/**.test.ts test/**/*.test.ts"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@nxpkghq/pinion": "^0.3.5",
+    "chalk": "^4.0.1",
+    "lodash": "^4.17.21",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@nxpkg/adapter-commons": "^5.0.11",
+    "@nxpkg/authentication": "^5.0.11",
+    "@nxpkg/authentication-client": "^5.0.11",
+    "@nxpkg/authentication-local": "^5.0.11",
+    "@nxpkg/authentication-oauth": "^5.0.11",
+    "@nxpkg/configuration": "^5.0.11",
+    "@nxpkg/errors": "^5.0.11",
+    "@nxpkg/express": "^5.0.11",
+    "@nxpkg/nxpkg": "^5.0.11",
+    "@nxpkg/knex": "^5.0.11",
+    "@nxpkg/koa": "^5.0.11",
+    "@nxpkg/mongodb": "^5.0.11",
+    "@nxpkg/rest-client": "^5.0.11",
+    "@nxpkg/schema": "^5.0.11",
+    "@nxpkg/socketio": "^5.0.11",
+    "@nxpkg/transport-commons": "^5.0.11",
+    "@nxpkg/typebox": "^5.0.11",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "^20.8.4",
+    "@types/prettier": "^2.7.3",
+    "axios": "^1.5.1",
+    "knex": "^3.0.1",
+    "mocha": "^10.2.0",
+    "mongodb": "^6.1.0",
+    "mssql": "^10.0.1",
+    "mysql": "^2.18.1",
+    "pg": "^8.11.3",
+    "shx": "^0.3.4",
+    "sqlite3": "^5.1.6",
+    "ts-node": "^10.9.1",
+    "type-fest": "^4.4.0",
+    "typescript": "^5.2.2"
+  },
+  "gitHead": "90caf635aec850550b9d37bea2762af959d9e8d5"
+}

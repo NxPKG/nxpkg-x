@@ -1,0 +1,76 @@
+{
+  "name": "@nxpkg/configuration",
+  "description": "A small configuration module for your Nxpkg application.",
+  "version": "5.0.11",
+  "homepage": "https://nxpkg.khulnasoft.com",
+  "main": "lib/",
+  "types": "lib/",
+  "keywords": [
+    "nxpkg",
+    "nxpkg-plugin"
+  ],
+  "license": "MIT",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/daffl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nxpkg/nxpkg.git",
+    "directory": "packages/configuration"
+  },
+  "author": {
+    "name": "Nxpkg contributors",
+    "email": "nxpkg@khulnasoft.com",
+    "url": "https://nxpkg.khulnasoft.com"
+  },
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/nxpkg/nxpkg/issues"
+  },
+  "engines": {
+    "node": ">= 12"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "src/**",
+    "lib/**",
+    "*.d.ts",
+    "*.js"
+  ],
+  "scripts": {
+    "prepublish": "npm run compile",
+    "pack": "npm pack --pack-destination ../generators/test/build",
+    "compile": "shx rm -rf lib/ && tsc && npm run pack",
+    "test": "NODE_CONFIG_DIR=./test/config mocha --config ../../.mocharc.json --recursive test/**.test.ts test/**/*.test.ts"
+  },
+  "semistandard": {
+    "env": [
+      "mocha"
+    ]
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@nxpkg.khulnasoft.commons": "^5.0.11",
+    "@nxpkg/nxpkg": "^5.0.11",
+    "@nxpkg/schema": "^5.0.11",
+    "@types/config": "^3.3.1",
+    "config": "^3.3.9"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.2",
+    "@types/node": "^20.8.4",
+    "mocha": "^10.2.0",
+    "shx": "^0.3.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "gitHead": "90caf635aec850550b9d37bea2762af959d9e8d5"
+}
